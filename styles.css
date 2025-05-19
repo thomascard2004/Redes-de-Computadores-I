@@ -49,14 +49,14 @@ body {
 .esquerda {
     border: 1px solid #ccc; /* Apenas para visualização */
     padding: 15px;
-    background-color: #ed323875;
+    background-color: #4745aa85;
     border-radius: 10px;
 }
 
 .direita {
     border: 1px solid #ccc; /* Apenas para visualização */
     padding: 15px;
-    background-color: #1c70ed66;
+    background-color: #2565c566;
     border-radius: 10px;
 }
 
