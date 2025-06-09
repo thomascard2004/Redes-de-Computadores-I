@@ -73,3 +73,18 @@ h2{
     padding: 20px;
 
 }
+
+.container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaço entre imagem e texto */
+}
+
+.imagem img {
+  max-width: 100px; /* Ajusta conforme necessário */
+  height: auto;
+}
+
+.texto {
+  font-size: 16px;
+}
