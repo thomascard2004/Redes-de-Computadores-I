@@ -5,7 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluetooth?</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="website icon" type="png" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #004f97;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 8px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #add8e6;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #004f97;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 80px;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -18,12 +72,61 @@
         <a href="novidades.html">Novidades</a>
         <a href="conclusao.html">Conclusão</a>
         <a href="perguntas.html">Perguntas</a>
+    </div>
 
-    </div>
     <div class="content" id="content">
-        <h2>O que é Bluetooth?</h2>
-        <p>Uma apresentação detalhada feita por um grupo dedicado.</p>
-    </div>
-    
+    <img src="bluetooth-logo.png" alt="Logo do Bluetooth" class="logo">
+    <h2>Novidades Bluetooth: LE Audio, Auracast e Futuro da Conectividade</h2>
+
+    <p>Com o avanço da tecnologia Bluetooth, a nova geração chamada <strong>Bluetooth LE Audio</strong> representa um divisor de águas. Lançado com o Bluetooth 5.2, LE Audio traz recursos revolucionários como o codec LC3, o padrão Auracast™ e canais isócronos, promovendo eficiência energética, qualidade sonora e acessibilidade.</p>
+
+    <h3>Codec LC3: Qualidade com Eficiência</h3>
+    <p>O <strong>LC3 (Low Complexity Communication Codec)</strong> substitui o SBC como codec padrão, oferecendo áudio de alta fidelidade em taxas de bits mais baixas. Estudos do Bluetooth SIG e análises acadêmicas mostram que o LC3, operando a 160 kbps, entrega qualidade superior ao SBC a 345 kbps, com menor latência (~5 ms) e menor consumo de energia. Sua robustez o torna ideal para aplicações móveis e de acessibilidade auditiva.</p>
+
+    <h3>Isochronous Channels e LE Power Control</h3>
+    <p>Os <strong>canais isócronos</strong> introduzidos no Bluetooth 5.2 permitem transmissão de áudio sincronizada em múltiplos dispositivos. Junto ao <strong>LE Power Control</strong>, que ajusta dinamicamente a força do sinal, essa arquitetura permite fluxos estáveis, com latência reduzida (~20–30 ms) e economia energética — ideais para fones de ouvido, aparelhos auditivos e dispositivos IoT.</p>
+
+    <h3>Auracast™: O futuro do broadcast de áudio</h3>
+    <p><strong>Auracast™</strong> transforma qualquer transmissor Bluetooth LE em um sistema de broadcast de áudio. Isso permite que múltiplos ouvintes recebam som simultaneamente, sem pareamento. Aplicações incluem cinemas, aeroportos, escolas, academias e suporte auditivo público. Estudos demonstram viabilidade de transmissão em larga escala com cobertura de até 14 metros por ponto, com estabilidade em ambientes ruidosos.</p>
+
+    <h3>Acessibilidade e Inclusão Auditiva</h3>
+    <p>Com o suporte a LE Audio e Auracast, aparelhos auditivos agora podem se conectar diretamente a TVs, smartphones e microfones sem dispositivos intermediários. Isso facilita a inclusão de pessoas com deficiência auditiva em espaços públicos, garantindo áudio claro, sincronizado e com mínima latência. Fabricantes como GN Hearing, ReSound e Cochlear já adotam a tecnologia.</p>
+
+    <h3>Adoção no mercado e ecossistema</h3>
+    <p>SoCs como o <strong>nRF5340</strong>, <strong>Qualcomm S5</strong>, <strong>MediaTek MT2833</strong> e dispositivos como Samsung Galaxy S23, TVs Neo QLED 2023 e Windows 11 já oferecem suporte. O ecossistema está se expandindo com fones, wearables e aparelhos auditivos compatíveis com LE Audio e Auracast, consolidando uma nova geração de produtos Bluetooth.</p>
+
+    <h3>Bluetooth Mesh e Evolução da IoT</h3>
+    <p><strong>Bluetooth Mesh</strong> permite redes malladas robustas para automação industrial, rastreamento indoor e smart buildings. A versão Core 6.0 e 6.1 (2024–2025) trouxe melhorias em segurança, sincronização de horários e eficiência energética. Embora desafios como latência em múltiplos hops existam, ajustes em protocolos e randomização de janelas temporais mitigam esses efeitos, viabilizando redes de larga escala.</p>
+
+   
+
+    <table style="width:100%; margin-top: 20px; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #004f97; color: white;">
+                <th style="padding: 10px;">Recurso</th>
+                <th style="padding: 10px;">Benefício</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px;">LC3 + Isochronous Channels</td>
+                <td style="padding: 10px;">Áudio de alta fidelidade, baixa latência e menor consumo</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Auracast™</td>
+                <td style="padding: 10px;">Broadcast de áudio público acessível e sem pareamento</td>
+            </tr>
+            <tr style="background-color: #f2f2f2;">
+                <td style="padding: 10px;">LE Audio</td>
+                <td style="padding: 10px;">Nova base da conectividade auditiva moderna</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">Bluetooth Mesh 6.1</td>
+                <td style="padding: 10px;">Redes malladas para IoT com melhor sincronização e escalabilidade</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 </body>
 </html>
