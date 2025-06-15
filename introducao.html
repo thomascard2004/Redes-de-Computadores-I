@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetooth?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #004f97;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 8px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #add8e6;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #004f97;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 80px;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="introducao.html">Introdução</a>
+        <a href="historico.html">Histórico</a>
+        <a href="visaogeral.html">Visão Geral</a>
+        <a href="arq.html">Estrutura e Funcionamento</a>
+        <a href="seg.html">Segurança</a>
+        <a href="serv&app.html">Serviços e Aplicações</a>
+        <a href="novidades.html">Novidades</a>
+        <a href="conclusao.html">Conclusão</a>
+        <a href="perguntas.html">Perguntas</a>
+    </div>
+
+    <div class="content" id="content">
+        <img src="bluetooth-logo.png" alt="Logo do Bluetooth" class="logo">
+        <h2>O que é Bluetooth?</h2>
+        <p>Desde os primórdios das redes de computadores, a busca pela mobilidade e autonomia dos usuários impulsionou o desenvolvimento de tecnologias sem fio. Nesse contexto, o Bluetooth surgiu como uma solução elegante, econômica e eficiente para conectar dispositivos pessoais em curtas distâncias.</p>
+
+        <p>Bluetooth é uma especificação de comunicação sem fio de curto alcance pertencente à família das redes pessoais (Personal Area Networks – PANs), formalmente padronizada como IEEE 802.15.1. Seu propósito é simples e ambicioso: permitir a conexão ad-hoc de dispositivos diversos — como celulares, laptops, fones de ouvido, impressoras e sensores — sem a necessidade de cabos ou configurações complexas.</p>
+
+        <p>Originalmente concebida para operar com baixo consumo energético e alcance entre 1 e 100 metros (dependendo da classe do dispositivo), a tecnologia Bluetooth favorece a comunicação espontânea entre dispositivos próximos, tornando a conectividade parte invisível do cotidiano.</p>
+
+        <p>Ao detectar um novo dispositivo no alcance, uma conexão pode ser automaticamente estabelecida. Um dos dispositivos assume o papel de mestre, enquanto os demais tornam-se escravos, formando uma <strong>piconet</strong>. É possível formar <strong>scatternets</strong> quando piconets diferentes compartilham um dispositivo em comum, criando assim uma rede mais ampla e dinâmica.</p>
+
+        <p>Além da praticidade, o Bluetooth foi desenvolvido com foco em segurança. Mecanismos como autenticação de PIN, criptografia de 128 bits e a técnica de espalhamento espectral por salto de frequência (frequency hopping) protegem a comunicação contra interferências e acessos não autorizados.</p>
+
+        <p>Combinando simplicidade de uso, baixo custo e boa segurança, o Bluetooth se estabeleceu como uma solução intermediária entre as limitações do infravermelho (IrDA) e a complexidade das redes Wi-Fi (WLAN). Assim, ele preenche o espaço ideal para aplicações móveis que exigem conectividade sem grandes exigências de configuração ou infraestrutura.</p>
+
+        <p>Este projeto explora em profundidade os fundamentos, aplicações e desafios da tecnologia Bluetooth, fornecendo uma visão completa desde os aspectos técnicos até a segurança envolvida. Continue navegando pelas seções para descobrir mais.</p>
+    </div>
+</body>
+</html>
