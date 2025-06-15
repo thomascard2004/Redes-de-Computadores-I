@@ -5,7 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluetooth?</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="website icon" type="png" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #004f97;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 8px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #add8e6;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #004f97;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 80px;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -18,12 +72,77 @@
         <a href="novidades.html">Novidades</a>
         <a href="conclusao.html">Conclusão</a>
         <a href="perguntas.html">Perguntas</a>
+    </div>
 
+        <div class="content" id="content">
+        <h2>Visão Geral</h2>
+        <p>
+            O <strong>Bluetooth</strong> é uma tecnologia de comunicação sem fio de curto alcance, baixo custo e baixo consumo de energia. Operando na faixa de frequência ISM de 2,4 GHz, ele permite a interconexão de dispositivos diversos, como celulares, fones de ouvido, impressoras, mouses, câmeras digitais, sistemas embarcados automotivos, entre outros. Seu funcionamento baseia-se na transmissão de dados por ondas de rádio, o que elimina a necessidade de cabos físicos.
+        </p>
+
+        <p>
+            A especificação Bluetooth define protocolos e requisitos para garantir que dispositivos de diferentes fabricantes possam se comunicar de forma confiável e padronizada. Desde sua criação pelo <em>Bluetooth Special Interest Group (SIG)</em>, formado inicialmente por empresas como Ericsson, IBM, Intel, Nokia e Toshiba, a tecnologia evoluiu consideravelmente e hoje é utilizada por milhares de empresas ao redor do mundo.
+        </p>
+
+        <p>
+            No contexto das redes, o Bluetooth faz parte da categoria de redes pessoais sem fio — também conhecidas como <strong>WPANs (Wireless Personal Area Networks)</strong>. A especificação Bluetooth foi padronizada sob a norma IEEE 802.15.1, o que reforça sua interoperabilidade e confiabilidade.
+        </p>
+
+        <h3>Camada Física</h3>
+        <p>
+            A <strong>camada física</strong> do Bluetooth é a mais baixa da sua pilha de protocolos. Ela define como os bits são convertidos em sinais de rádio e transmitidos entre dispositivos. Essa camada determina:
+        </p>
+        <ul>
+            <li><strong>Frequência de operação:</strong> faixa ISM de 2,4 GHz.</li>
+
+            <li><strong>Modulação:</strong> GFSK, DPSK e QPSK, conforme a versão do Bluetooth.</li>
+            <li><strong>Taxa de transmissão:</strong> 1 Mbps (Bluetooth clássico), 2-3 Mbps (EDR), até 2 Mbps no Bluetooth Low Energy (BLE).</li>
+            <li><strong>Potência do sinal:</strong> Classificada em três níveis (Classe 1 – 100 m, Classe 2 – 10 m, Classe 3 – 1 m).</li>
+        </ul>
+
+        <p>
+            Para que dois dispositivos se comuniquem via Bluetooth, eles devem estar <strong>sintonizados na mesma frequência</strong> e suficientemente próximos. Além disso, como múltiplos dispositivos podem compartilhar o mesmo espectro, cada pacote transmitido inicia com um <strong>código de acesso</strong>, que ajuda a sincronizar e diferenciar os dispositivos em um mesmo canal físico.
+        </p>
+
+        <h3>Topologia: Piconet e Scatternet</h3>
+<p>
+    A comunicação Bluetooth ocorre dentro de uma <strong>piconet</strong>, que é uma pequena rede formada por um dispositivo <em>mestre</em> e até sete dispositivos <em>escravos ativos</em>. Outros dispositivos podem estar conectados, mas ficam em estado de espera (<em>parked</em>) com endereços de estacionamento.
+</p>
+
+
+<div style="margin: 24px 0; text-align: center;">
+    <img src="piconet.png" alt="Exemplo de uma Piconet Bluetooth" style="max-width: 100%; height: auto;">
+    <p style="font-size: 1em;text-align: center;"><strong>Figura 1: Estrutura de uma Piconet Bluetooth</strong></p>
+</div>
+
+<p>
+    A formação da piconet segue os seguintes passos:
+</p>
+<ul>
+    <li><strong>Inquiry:</strong> o futuro mestre envia pacotes para descobrir dispositivos próximos.</li>
+    <li><strong>Paging:</strong> o mestre seleciona dispositivos para conectar.</li>
+    <li><strong>Role Assignment:</strong> quem inicia torna-se o mestre; os demais, escravos.</li>
+    <li><strong>Sincronização:</strong> todos os dispositivos seguem o clock do mestre e saltam entre canais conforme seu comando (técnica FHSS).</li>
+</ul>
+
+<p>
+    Em casos mais complexos, várias piconets podem se conectar por meio de um ou mais dispositivos em comum. Esse conjunto de piconets interligadas forma uma <strong>scatternet</strong>. Nela, um mesmo dispositivo pode atuar como escravo em múltiplas piconets, mas apenas como mestre em uma. A alternância entre redes é realizada por multiplexação por divisão de tempo (TDM).
+</p>
+
+
+<div style="margin: 24px 0; text-align: center;">
+    <img src="scatternet.png" alt="Exemplo de uma Scatternet Bluetooth" style="max-width: 100%; height: auto;">
+    <p style="font-size: 1em; text-align: center;"><strong>Figura 2: Estrutura de uma Scatternet formada por múltiplas Piconets</strong></p>
+</div>
+
+<p>
+    A <strong>topologia</strong> Bluetooth permite tanto conexões ponto-a-ponto quanto ponto-a-multiponto. Isso possibilita a criação de redes móveis ad hoc (MANETs), facilitando a comunicação em contextos dinâmicos e com baixo consumo de energia.
+</p>
+
+<p>
+    Apesar da maioria dos dispositivos utilizarem conexões ponto-a-ponto, o suporte a topologias mais complexas como as scatternets garante escalabilidade e flexibilidade à tecnologia Bluetooth.
+</p>
     </div>
-    <div class="content" id="content">
-        <h2>O que é Bluetooth?</h2>
-        <p>Uma apresentação detalhada feita por um grupo dedicado.</p>
-    </div>
-    
+
 </body>
 </html>

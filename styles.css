@@ -19,6 +19,28 @@ body {
     justify-content: center;
     gap: 20px;
 }
+ .content {
+    padding: 32px;
+    line-height: 1.6;
+  }
+
+  .content h2, .content h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .content p {
+    margin-bottom: 16px;
+  }
+
+  .content ul {
+    margin-bottom: 24px;
+    padding-left: 20px;
+  }
+
+  .content li {
+    margin-bottom: 8px;
+  }
 
 .navbar a {
     color: white;
