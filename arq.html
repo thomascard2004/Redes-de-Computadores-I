@@ -5,7 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluetooth?</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="website icon" type="png" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #004f97;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 8px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #add8e6;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #004f97;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 80px;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -18,12 +72,55 @@
         <a href="novidades.html">Novidades</a>
         <a href="conclusao.html">Conclusão</a>
         <a href="perguntas.html">Perguntas</a>
+    </div>
+
+    <div class="content" id="content">
+       <h3>Modelo de Pacote / Segmento</h3>
+<p>O modelo dos pacotes transmitidos em uma conexão Bluetooth está esboçado a seguir:</p>
+
+<div style="text-align: center; margin-bottom: 2em;">
+    <img src="CAMINHO/para/imagem1.png" alt="Cabeçalho do Pacote Bluetooth" style="max-width: 100%; height: auto;">
+    <p><em>Figura: Cabeçalho com campos de controle, ACK/NACK e sequência</em></p>
+</div>
+
+<div style="text-align: center; margin-bottom: 2em;">
+    <img src="CAMINHO/para/imagem2.png" alt="Estrutura de Pacote Bluetooth" style="max-width: 100%; height: auto;">
+    <p><em>Figura: Estrutura completa do pacote Bluetooth com código de acesso, cabeçalho e dados</em></p>
+</div>
+
+<div style="text-align: center; margin-bottom: 2em;">
+    <img src="CAMINHO/para/imagem3.png" alt="Formato de Segmento Bluetooth" style="max-width: 100%; height: auto;">
+    <p><em>Figura: Segmento Bluetooth com cabeçalho, corpo e código de verificação (CRC)</em></p>
+</div>
+
+<h4>Tipos de Códigos de Acesso</h4>
+<ul>
+    <li><strong>CAC (Channel Access Code):</strong> Identifica a piconet.</li>
+    <li><strong>DAC (Device Access Code):</strong> Usado durante o pedido e resposta de conexão (paging procedure).</li>
+    <li><strong>IAC (Inquiry Access Code):</strong> Utilizado no processo de inquérito, para descobrir dispositivos próximos.</li>
+</ul>
+
+<h4>Cabeçalho</h4>
+<p>O cabeçalho é composto por diversos campos de controle, e os pacotes podem ser de diferentes tipos, como: ID, NULL, POLL, FHS, DM1, DH1, AUX1, DM3, DH3, DM5, DH5, HV1, HV2, HV3, DV.</p>
+
+<h4>Dados</h4>
+<p>Os dados incluem a informação útil a ser transmitida, além de um campo de verificação de erro (CRC) para garantir a integridade da informação.</p>
+
+<h3>Estados Operacionais</h3>
+<p>O Bluetooth opera em quatro estados principais, com diferentes níveis de consumo energético:</p>
+<ul>
+    <li><strong>Desconectado:</strong> Nenhuma comunicação ocorre.</li>
+    <li><strong>Conectando (Page / Inquiry):</strong> Estado de descoberta ou tentativa de conexão.</li>
+    <li><strong>Ativo:</strong> Comunicação de dados em andamento.</li>
+    <li><strong>Baixo consumo:</strong>
+        <ul>
+            <li><em>Hold:</em> Dispositivo conectado, mas sem atividade temporária.</li>
+            <li><em>Sniff:</em> Dispositivo escuta com menos frequência para economizar energia.</li>
+            <li><em>Park:</em> Conectado, mas sem transmitir/receber — pronto para voltar à ativa.</li>
+        </ul>
+    </li>
+</ul>
 
     </div>
-    <div class="content" id="content">
-        <h2>O que é Bluetooth?</h2>
-        <p>Uma apresentação detalhada feita por um grupo dedicado.</p>
-    </div>
-    
 </body>
 </html>
